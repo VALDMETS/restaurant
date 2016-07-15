@@ -5,9 +5,8 @@ import router from '../router';
 
 function navFunction() {
 
-  $('input').click(function(){
-    console.log('whatever');
-    router.navigate('menu', {trigger: true});
+  $('.placeorder').click(function(){
+    router.navigate('order', {trigger: true});
   });
 
 }

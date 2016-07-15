@@ -15,7 +15,7 @@ const Router = Bb.Router.extend({
     renderMenu();
   },
   orderFunction: function() {
-    console.log('make order');
+    renderOrder();
   },
   orderComplete: function() {
     console.log('make final page');
