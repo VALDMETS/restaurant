@@ -1,29 +1,9 @@
 import $ from 'jquery';
 import Bb from 'backbone';
 
-import router from './router';
-import menuItem from './models/menuitem';
-import menuList from './collections/menulist';
+import navFunction from './views/nav';
 
-console.log(router);
-$('input').click(function(){
-  console.log('whatever');
-  router.navigate('menu', {trigger: true});
-});
+location.hash = 'menu';
 
-// $('input').click(function(){
-//     router.navigate('page1', {trigger: true});
-// });
-
-
-let menuBuild = new menuList();
-console.log(menuBuild);
-
-menuBuild.fetch({
-  success: function(response){
-    console.log('got em');
-    // console.log(response.get('breakfast'));
-  }
-});
-
+navFunction();
 Bb.history.start();

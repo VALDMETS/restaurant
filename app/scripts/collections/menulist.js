@@ -2,9 +2,9 @@ import $ from 'jquery';
 import Bb from 'backbone';
 import menuItem from '../models/menuitem';
 
-const menuList = Bb.Collection.extend({
+const MenuList = Bb.Collection.extend({
   model: menuItem,
-  url: 'https://tiy-austin-front-end-engineering.github.io/restaurantApi/cafe.json'
+  url: 'http://tiny-za-server.herokuapp.com/collections/benscoolorders'
 });
 
-export default menuList;
+export default MenuList;
