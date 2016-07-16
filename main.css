@@ -8,12 +8,12 @@ body {
 header {
   position: fixed;
   background-color: #E5D1D0;
-  opacity: .8;
-  color: #F1F1f1;
+  opacity: .9;
+  color: #F1F1F1;
   height: 50px;
   width: 100%;
-  border-top: 2px solid #F1F1f1;
-  border-bottom: 2px solid #F1F1f1; }
+  border-top: 2px solid #F1F1F1;
+  border-bottom: 2px solid #F1F1F1; }
   header h2 {
     font-family: 'Lobster', sans-serif;
     font-style: italic;
@@ -31,13 +31,14 @@ main {
   position: fixed; }
 
 nav, .orderbox {
-  background-color: #F1F1f1;
+  background-color: #F1F1F1;
   border: 2px solid #E5D1D0;
   width: 80%;
   margin: 20px auto;
   box-shadow: 3px 3px #CEBCBB;
   padding-bottom: 10px;
-  font-size: 14px; }
+  font-size: 14px;
+  border-radius: 5px; }
 
 li {
   color: #5B4E4E;
@@ -46,7 +47,7 @@ li {
 
 a {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 500;
   letter-spacing: 1.2px;
   display: block;
   text-decoration: none;
@@ -92,6 +93,23 @@ h4 {
   display: block;
   float: right; }
 
+.placeorder {
+  width: 50%;
+  display: block;
+  margin: 10px auto 0 auto;
+  background: none;
+  border: 1px solid #5B4E4E;
+  border-radius: 2px; }
+
+h1 {
+  font-family: 'Lobster', sans-serif;
+  color: #5B4E4E;
+  font-size: 50px;
+  margin: 20px 0 20px -25px;
+  text-align: center;
+  text-shadow: 4px 4px #F1F1F1;
+  letter-spacing: 4.5px; }
+
 .menuwindow {
   padding: 71px 0 0 320px;
   width: auto;
@@ -100,7 +118,7 @@ h4 {
 
 .imagebox {
   display: block;
-  width: 95%;
+  width: 99%;
   height: auto;
   max-height: 240px;
   overflow: hidden;
@@ -111,7 +129,48 @@ h4 {
     width: 100%;
     height: auto; }
 
+.menucontent {
+  background: #F1F1F1;
+  border-radius: 30px;
+  padding-bottom: 110px; }
+
 h3 {
-  padding-top: 60px; }
+  margin: 0 0 10px 0;
+  padding: 60px 0 5px 40px;
+  font-size: 32px;
+  letter-spacing: 8px;
+  text-shadow: 2px 2px #A99985;
+  border-bottom: 4px dotted #CEBCBB; }
+
+.menuitem {
+  display: block;
+  padding: 0 20px 10px 40px;
+  border-bottom: 2px dotted #CEBCBB; }
+  .menuitem .firstline {
+    display: block; }
+  .menuitem .itemname {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 500; }
+  .menuitem .itemdescription {
+    font-style: italic;
+    letter-spacing: .5px; }
+  .menuitem .itemprice {
+    display: block;
+    float: right; }
+  .menuitem .iconbox {
+    display: inline-block;
+    width: 80px;
+    margin: 5px 15px 0 0; }
+    .menuitem .iconbox i {
+      padding: 0 4px;
+      color: #A99985; }
+  .menuitem .order {
+    display: block;
+    float: right;
+    width: 60px;
+    background: #F5E4D7;
+    border: 1px solid #5B4E4E;
+    border-radius: 2px; }
 
 /*# sourceMappingURL=main.css.map */
