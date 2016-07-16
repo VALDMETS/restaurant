@@ -21,7 +21,7 @@ function orderFunction () {
     });
     orderList.totalCalc(tempItem.get('price'));
     let tempName = tempItem.get('name');
-    if (tempName.length >= 25) { tempName = tempName.slice(0, 25) + '...';}
+    if (tempName.length >= 27) { tempName = tempName.slice(0, 26) + '...';}
     $('.ordercontent').append(`
       <div class="orderitem" data-id="${tempItem.get('id')}">
         <input type="button" class="delete" value="X">

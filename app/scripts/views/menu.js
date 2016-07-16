@@ -27,12 +27,14 @@ function renderMenu(data) {
                       menuHold.add(itemBuild(item));
                       $('#' + menuTitles[i]).append(`
                         <div class="menuitem" data-id="${item.id}">
-                          <span class="itemname">${item.item}</span>
-                          <span class="itemprice">$${item.price}.00</span>
+                          <div class="firstline">
+                            <span class="itemname">${item.item}</span>
+                            <span class="itemdescription"> - ${item.description}</span>
+                            <span class="itemprice">$${item.price}.00</span>
+                          </div>
                           <div class="iconbox">
                           </div>
-                          <span class="itemdescription">${item.description}</span>
-                          <button type="button" class="order">ORDER</button>
+                          <button type="button" class="order">ADD</button>
                         </div>
                       `);
                     } else {
@@ -43,29 +45,30 @@ function renderMenu(data) {
                         item.price = pricePair[1];
                         item.id = item.id + 100;
                         item.item = nameHold + ' ('+ pricePair[0] + ')';
-                        console.log(item.price);
                         menuHold.add(itemBuild(item));
                         $('#' + menuTitles[i]).append(`
                           <div class="menuitem" data-id="${item.id}">
-                            <span class="itemname">${item.item}</span>
-                            <span class="itemprice">$${pricePair[1]}.00</span>
+                            <div class="firstline">
+                              <span class="itemname">${item.item}</span>
+                              <span class="itemdescription"> - ${item.description}</span>
+                              <span class="itemprice">$${pricePair[1]}.00</span>
+                            <div>
                             <div class="iconbox">
                             </div>
-                            <span class="itemdescription">${item.description}</span>
-                            <button type="button" class="order">ORDER</button>
+                            <button type="button" class="order">ADD</button>
                           </div>
                         `);
                       });
                     }
 
                     if (item['local fav'] === 1) {
-                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i>faveicon</i>');
+                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i class="fa fa-thumbs-up" aria-hidden="true"></i>');
                     }
                     if (item['low sodium'] === 1) {
-                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i>hearticon</i>');
+                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i class="fa fa-heartbeat" aria-hidden="true"></i>');
                     }
                     if (item['under 500 cals'] === 1) {
-                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i>dieticon</i>');
+                        $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i class="fa fa-leaf" aria-hidden="true"></i>');
                     }
                 });
 
