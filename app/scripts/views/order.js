@@ -20,18 +20,25 @@ function orderFunction () {
       special: ''
     });
     orderList.totalCalc(tempItem.get('price'));
-
+    let tempName = tempItem.get('name');
+    if (tempName.length >= 25) { tempName = tempName.slice(0, 25) + '...';}
     $('.ordercontent').append(`
       <div class="orderitem" data-id="${tempItem.get('id')}">
-        <input type="button" name="delete" value="X">
-        <span>${tempItem.get('name')}</span>
-        <span>$${tempItem.get('price')}.00</span>
+        <input type="button" class="delete" value="X">
+        <span>${tempName}</span>
+        <span class="itemtax">$${tempItem.get('price')}.00</span>
       </div>
     `);
     $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
     $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
+
+    $('.delete').click(function(){
+      buttonID = $(this).parent().data().id;
+      console.log(buttonID);
+    });
   });
 
+  return orderList;
 }
 
 export default orderFunction;

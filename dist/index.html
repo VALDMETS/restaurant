@@ -3,50 +3,53 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Parkfield Cafe</title>
+		<link href="https://fonts.googleapis.com/css?family=Dosis:400,300,500,600|Lobster" rel="stylesheet" type="text/css">
 		<link media="screen" href="main.css" rel="stylesheet"/>
 	</head>
 	<body>
-	<header>
-		<h2>Order Online</h2>
-	</header>
-	<section class="sidebar">
-		<nav>
-			<ul>
-				<a href="#breakfast">Breakfast</a>
-				<a href="#sandwiches">Sandwiches</a>
-				<a href="#toppings">Extras</a>
-				<a href="#sides">Sides</a>
-				<a href="#salads">Salads</a>
-				<a href="#soups">Soups</a>
-				<a href="#drinks">Drinks</a>
-				<a href="#desserts">Desserts</a>
-			</ul>
-		</nav>
-		<div class="orderbox">
-			<h4>Your Order</h4>
-			<div class="ordercontent">
-				<h6>Item</h6>
-				<span>Quantity</span>
-				<!-- <div class="orderitem" data-id="placeholder">
-					<input type="button" name="delete" value="X">
-					<span>Item Name</span>
-					<input type="button" name="quantity" value="1">
-					<span>$3.00</span>
-				</div> -->
-			</div>
-			<span>Tax</span>
-			<span class="currenttax">$0.00</span>
-			<span>Total</span>
-			<span class="currenttotal">$0.00</span>
-			<button type="button" class="placeorder">Place Order</button>
-		</div>
-	</section>
-	<section class="menuwindow">
-		<!-- <img src="https://whatever.com" /> -->
-		<h1>MENU</h1>
-		<div class="menucontent">
-		</div>
-	</section>
+		<header>
+			<h2>Order Online</h2>
+		</header>
+		<main>
+			<section class="sidebar">
+				<nav>
+					<ul>
+						<li><a href="#breakfast">Breakfast</a></li>
+						<li><a href="#sandwiches">Sandwiches</a></li>
+						<li><a href="#toppings">Toppings</a></li>
+						<li><a href="#sides">Sides</a></li>
+						<li><a href="#salads">Salads</a></li>
+						<li><a href="#soups">Soups</a></li>
+						<li><a href="#drinks">Drinks</a></li>
+						<li><a href="#desserts">Desserts</a></li>
+					</ul>
+				</nav>
+				<div class="orderbox">
+					<h4>Your Order</h4>
+					<div class="ordercontent">
+						<!-- <h6>Item</h6> -->
+						<!-- <span>Quantity</span> -->
+						<!-- <div class="orderitem" data-id="placeholder">
+							<input type="button" name="delete" value="X">
+							<span>Item Name</span>
+							<input type="button" name="quantity" value="1">
+							<span>$3.00</span>
+						</div> -->
+					</div>
+					<span>Tax<span class="currenttax">$0.00</span></span>
+
+					<span>Total<span class="currenttotal">$0.00</span></span>
+
+					<button type="button" class="placeorder">Place Order</button>
+				</div>
+			</section>
+			<section class="menuwindow">
+				<div class="imagebox"><img src="/assets/coffeebanner.jpg"></div>
+				<h1>MENU</h1>
+				<div class="menucontent">
+				</div>
+			</section>
+		</main>
 		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>

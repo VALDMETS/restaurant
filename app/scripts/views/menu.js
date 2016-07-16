@@ -22,18 +22,42 @@ function renderMenu(data) {
                 }
                 section.forEach(function(item) {
 
-                    // console.log(itemBuild(item));
-                    menuHold.add(itemBuild(item));
-                    $('#' + menuTitles[i]).append(`
-                      <div class="menuitem" data-id="${item.id}">
-                        <span class="itemname">${item.item}</span>
-                        <span class="itemprice">$${item.price}.00</span>
-                        <div class="iconbox">
+                    let nameHold = item.item;
+                    if (typeof item.price === 'number') {
+                      menuHold.add(itemBuild(item));
+                      $('#' + menuTitles[i]).append(`
+                        <div class="menuitem" data-id="${item.id}">
+                          <span class="itemname">${item.item}</span>
+                          <span class="itemprice">$${item.price}.00</span>
+                          <div class="iconbox">
+                          </div>
+                          <span class="itemdescription">${item.description}</span>
+                          <button type="button" class="order">ORDER</button>
                         </div>
-                        <span class="itemdescription">${item.description}</span>
-                        <button type="button" class="order">ORDER</button>
-                      </div>
-                    `);
+                      `);
+                    } else {
+
+                      let tempPrice = _.pairs(item.price);
+                      tempPrice.forEach(function(pricePair){
+                        // console.log(pricePair);
+                        item.price = pricePair[1];
+                        item.id = item.id + 100;
+                        item.item = nameHold + ' ('+ pricePair[0] + ')';
+                        console.log(item.price);
+                        menuHold.add(itemBuild(item));
+                        $('#' + menuTitles[i]).append(`
+                          <div class="menuitem" data-id="${item.id}">
+                            <span class="itemname">${item.item}</span>
+                            <span class="itemprice">$${pricePair[1]}.00</span>
+                            <div class="iconbox">
+                            </div>
+                            <span class="itemdescription">${item.description}</span>
+                            <button type="button" class="order">ORDER</button>
+                          </div>
+                        `);
+                      });
+                    }
+
                     if (item['local fav'] === 1) {
                         $(`div[data-id="${item.id}"]`).find('.iconbox').append('<i>faveicon</i>');
                     }
@@ -46,9 +70,9 @@ function renderMenu(data) {
                 });
 
             });
-            
+
             orderFunction();
-            // console.log(menuHold);
+
         }
 
     });

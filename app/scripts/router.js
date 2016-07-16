@@ -2,6 +2,7 @@ import $ from 'jquery';
 import Bb from 'backbone';
 
 import renderMenu from './views/menu';
+import renderOrder from './views/orderpage';
 
 const Router = Bb.Router.extend({
 

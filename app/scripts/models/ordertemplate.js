@@ -9,8 +9,6 @@ const Order = Bb.Model.extend({
     tax: 0
   },
   totalCalc: function (newCost) {
-    console.log(this.get('total'));
-    console.log(newCost);
     let newTax = newCost*0.0825;
     this.set({
       tax: this.get('tax') + newTax
