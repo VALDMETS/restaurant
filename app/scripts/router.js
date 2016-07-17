@@ -3,6 +3,7 @@ import Bb from 'backbone';
 
 import renderMenu from './views/menu';
 import renderOrder from './views/orderpage';
+import renderThankYou from './views/thankyou';
 
 const Router = Bb.Router.extend({
 
@@ -12,14 +13,13 @@ const Router = Bb.Router.extend({
     'order/complete' : 'orderComplete'
   },
   menuFunction: function() {
-    console.log('make menu');
     renderMenu();
   },
   orderFunction: function() {
     renderOrder();
   },
   orderComplete: function() {
-    console.log('make final page');
+    renderThankYou();
   }
 });
 

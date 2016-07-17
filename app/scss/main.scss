@@ -5,7 +5,8 @@ body {
   margin: 0;
   color: $black;
   font-family: 'Dosis', sans-serif;
-  background-color: $white;
+  // background-color: $white;
+  background-image: url("/assets/wov.png");
 }
 
 header {
@@ -78,15 +79,12 @@ h4 {
   border-bottom: 1px dotted $black;
   max-height: 200px;
   overflow: scroll;
-  // border-top: 1px solid $black;
-  // padding: 5px 0;
 }
 
 .orderbox span {
   padding: 2px 4px 4px 50px;
   display: block;
   border-bottom: 1px dotted $black;
-  // border-bottom: 1px dotted $black;
 }
 .orderbox .currenttax, .orderbox .currenttotal {
   display: block;
@@ -154,13 +152,9 @@ h1 {
   box-shadow: 3px 3px $darkpink;
   img {
     transition: 3s;
-    // opacity: .8;
     min-width: 440px;
     width: 100%;
     height: auto;
-    // &:hover {
-    //   opacity: 1;
-    // }
   }
 }
 .menucontent {
@@ -201,7 +195,6 @@ h3 {
   .iconbox {
     display: inline-block;
     width: 80px;
-    // border: 1px solid $black;
     margin: 5px 15px 0 0;
     i {
       padding: 0 4px;
@@ -304,11 +297,43 @@ h3 {
     right: 10%;
     bottom: 0px;
   }
-  // .bottomexit {
-  //   position: absolute;
-  //   left: 0px;
-  //   bottom: 10px;
-  // }
+}
+.orderconfirmed {
+  position: relative;
+  color: black;
+  position: fixed;
+  width: 50%;
+  max-width: 800px;
+  min-width: 400px;
+  height: 400px;
+  top: 100px;
+  left: 25%;
+  background-color: $pink;
+  z-index: 4;
+
+  border: 2px solid $darkpink;
+  box-shadow: 3px 3px $tan;
+  border-radius: 10px;
+
+  p {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  input {
+    font-family: 'Dosis', sans-serif;
+    display: block;
+    margin: 70px auto;
+    padding: 10px 0;
+    width: 50%;
+    font-size: 26px;
+    border: 3px solid $darkpink;
+    border-radius: 20px;
+    box-shadow: 3px 3px $tan;
+    background-color: $light;
+    outline: none;
+
+  }
 }
 
 .overlay {

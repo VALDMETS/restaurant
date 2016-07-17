@@ -31,7 +31,6 @@ function orderFunction () {
     `);
     $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
     $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
-    console.log(orderList.get('tax'));
 
     $('.delete').click(function(){
       buttonID = $(this).parent().data().id;

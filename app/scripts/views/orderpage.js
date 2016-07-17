@@ -2,6 +2,7 @@ import $ from 'jquery';
 import Bb from 'backbone';
 
 import orderFunction from './order';
+import router from '../router';
 
 function renderOrder() {
 
@@ -28,15 +29,20 @@ function renderOrder() {
       location.hash = 'menu';
     });
 
-    console.log(orderFunction());
-    // use this to run on 'confirm order button'
-    // console.log(orderFunction());
-    // orderFunction().save(null, {
-    //   success: function() {
-    //     console.log('order sent');
-    //   }
-    // });
+    $('#confirmorder').click(function(){
+      orderList.set({
+        special: $('#special').val()
+      });
 
+      // orderList().save(null, {
+      //   success: function() {
+      //     console.log('order sent');
+      //   }
+      // });
+
+      router.navigate('order/complete', {trigger: true});
+
+    });
 }
 
 
