@@ -3,7 +3,7 @@ body {
   margin: 0;
   color: #5B4E4E;
   font-family: 'Dosis', sans-serif;
-  background-color: #F5E4D7; }
+  background-image: url("/assets/wov.png"); }
 
 header {
   position: fixed;
@@ -258,6 +258,37 @@ h3 {
     width: 80%;
     right: 10%;
     bottom: 0px; }
+
+.orderconfirmed {
+  position: relative;
+  color: black;
+  position: fixed;
+  width: 50%;
+  max-width: 800px;
+  min-width: 400px;
+  height: 400px;
+  top: 100px;
+  left: 25%;
+  background-color: #E5D1D0;
+  z-index: 4;
+  border: 2px solid #CEBCBB;
+  box-shadow: 3px 3px #A99985;
+  border-radius: 10px; }
+  .orderconfirmed p {
+    text-align: center;
+    font-size: 19px; }
+  .orderconfirmed input {
+    font-family: 'Dosis', sans-serif;
+    display: block;
+    margin: 70px auto;
+    padding: 10px 0;
+    width: 50%;
+    font-size: 26px;
+    border: 3px solid #CEBCBB;
+    border-radius: 20px;
+    box-shadow: 3px 3px #A99985;
+    background-color: #F1F1F1;
+    outline: none; }
 
 .overlay {
   position: fixed;
