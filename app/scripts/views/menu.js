@@ -14,6 +14,7 @@ function renderMenu(data) {
         success: function(data) {
             const menuList = _.toArray(data);
             const menuTitles = _.keys(data);
+            $('.menucontent').empty();
             menuList.forEach(function(section, i) {
 
                 $('.menucontent').append(`<section id="${menuTitles[i]}"></section>`);
@@ -52,7 +53,7 @@ function renderMenu(data) {
                               <span class="itemname">${item.item}</span>
                               <span class="itemdescription"> - ${item.description}</span>
                               <span class="itemprice">$${pricePair[1]}.00</span>
-                            <div>
+                            </div>
                             <div class="iconbox">
                             </div>
                             <button type="button" class="order">ADD</button>

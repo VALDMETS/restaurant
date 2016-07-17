@@ -41,6 +41,24 @@
 				</div>
 			</section>
 		</main>
+		<div class="overlay hidden">
+		</div>
+		<section class="orderup hidden">
+			<input type="button" class="orderexit topexit" value="X">
+			<h2>ORDER CONFIRMATION</h2>
+			<div class="confirmbox">
+			</div>
+			<div class="instructionbox">
+				<span>Special Instructions:</span>
+				<textarea id="special"></textarea>
+			</div>
+			<div class="totalbox">
+				<span>Tax<span class="currenttax"></span></span>
+				<span>Total<span class="currenttotal"></span></span>
+				<!-- <button type="button" class="orderexit bottomexit">CANCEL</button> -->
+				<button type="button" id="confirmorder">CONFIRM ORDER</button>
+			</div>
+		</section>
 		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>

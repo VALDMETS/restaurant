@@ -10,6 +10,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 1;
   background-color: $pink;
   opacity: .9;
   color: $light;
@@ -34,6 +35,7 @@ main {
   top: 50px;
   width: 300px;
   position: fixed;
+  z-index: 2;
 }
 nav, .orderbox {
   background-color: $light;
@@ -56,9 +58,11 @@ a {
   font-weight: 500;
   letter-spacing: 1.2px;
   display: block;
-  // font-style: none;
   text-decoration: none;
   color: $black;
+  &:hover{
+    color: black;
+  }
 }
 h4 {
   font-size: 19px;
@@ -79,11 +83,9 @@ h4 {
 }
 
 .orderbox span {
-  padding: 2px 0 4px 50px;
+  padding: 2px 4px 4px 50px;
   display: block;
-  padding-left: 50px;
   border-bottom: 1px dotted $black;
-  padding-right: 6px;
   // border-bottom: 1px dotted $black;
 }
 .orderbox .currenttax, .orderbox .currenttotal {
@@ -98,9 +100,18 @@ h4 {
   padding: 2px 0;
   span {
     display: inline-block;
-    padding-left: 0;
+    padding: 0;
     border: none;
   }
+}
+.delete {
+  float: left;
+  font-size: 8px;
+  background: none;
+  border: 1px solid $black;
+  border-radius: 8px;
+  margin: 0 10px 2px 6px;
+  outline: none;
 }
 .itemtax {
   display: block;
@@ -133,22 +144,28 @@ h1 {
 }
 .imagebox {
   display: block;
-  // margin-right: 20px;
+  background-color: $light;
   width: 99%;
   height: auto;
   max-height: 240px;
   overflow: hidden;
   border: 2px solid $pink;
+  border-radius: 5px;
   box-shadow: 3px 3px $darkpink;
   img {
+    transition: 3s;
+    // opacity: .8;
     min-width: 440px;
     width: 100%;
     height: auto;
+    // &:hover {
+    //   opacity: 1;
+    // }
   }
 }
 .menucontent {
   background: $light;
-  // border: 1px solid $pink;
+  border: 3px solid $darkpink;
   border-radius: 30px;
   padding-bottom: 110px;
 }
@@ -162,7 +179,7 @@ h3 {
 }
 .menuitem{
   display: block;
-  padding: 0 20px 10px 40px;
+  padding: 4px 20px 7px 40px;
   border-bottom: 2px dotted $darkpink;
   .firstline {
     display: block;
@@ -177,6 +194,7 @@ h3 {
     letter-spacing: .5px;
   }
   .itemprice {
+    font-size: 18px;
     display: block;
     float:right;
   }
@@ -188,6 +206,10 @@ h3 {
     i {
       padding: 0 4px;
       color: $tan;
+      transition: 1s;
+      &:hover {
+        color: $black;
+      }
     }
   }
   .order {
@@ -197,5 +219,106 @@ h3 {
     background: $white;
     border: 1px solid $black;
     border-radius: 2px;
+    outline: none;
   }
+}
+.orderup {
+  position: relative;
+  font-family: monospace;
+  color: black;
+  position: fixed;
+  width: 50%;
+  max-width: 800px;
+  min-width: 400px;
+  // height: 500px;
+  top: 100px;
+  left: 25%;
+  background-color: $light;
+  z-index: 4;
+  h2 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 26px;
+  }
+  .topexit {
+    display: block;
+    float: right;
+    margin: 10px 10px 0 0;
+  }
+  .confirmbox {
+    margin: 10px auto;
+    width: 90%;
+    border: 1px solid black;
+  }
+  .orderitem {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 0;
+    border-bottom: 1px dotted black;
+    span {
+      padding-left: 14px;
+    }
+  }
+  .itemtax {
+    padding-right: 10px;
+  }
+  .instructionbox, .totalbox {
+    // height: 140px;
+    position: relative;
+    width: 46%;
+    margin: 2%;
+    float: left;
+  }
+  .instructionbox span {
+    text-align: center;
+  }
+  textarea {
+    font-family: monospace;
+    display: block;
+    width: 90%;
+    margin: 4px auto;
+    height: 100px;
+    resize: none;
+  }
+  .totalbox {
+    width: 42%;
+    height: 130px;
+  }
+  .totalbox span {
+    font-size: 18px;
+    display: block;
+    // border-bottom: 2px dotted black;
+    span {
+      float: right;
+    }
+  }
+  .orderexit, #confirmorder {
+    background: none;
+    border: 1px solid black;
+  }
+  #confirmorder {
+    background-color: white;
+    font-size: 18px;
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    bottom: 0px;
+  }
+  // .bottomexit {
+  //   position: absolute;
+  //   left: 0px;
+  //   bottom: 10px;
+  // }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 150vw;
+  background-color: black;
+  opacity: .85;
+  z-index: 3;
+}
+.hidden {
+  display: none;
 }

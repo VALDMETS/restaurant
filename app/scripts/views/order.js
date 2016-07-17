@@ -31,10 +31,23 @@ function orderFunction () {
     `);
     $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
     $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
+    console.log(orderList.get('tax'));
 
     $('.delete').click(function(){
       buttonID = $(this).parent().data().id;
-      console.log(buttonID);
+      orderList.removeCost(buttonID);
+      $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
+      $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
+      orderList.set({
+        items: orderList.get('items').filter(function(item){
+          if (item.id!=buttonID) {
+            return true;
+          } else {
+            return false;
+          }
+        })
+      });
+      $(this).parent().addClass('hidden');
     });
   });
 
