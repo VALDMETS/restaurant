@@ -4,7 +4,7 @@ body {
   color: #5B4E4E;
   font-family: 'Dosis', sans-serif;
   background-color: #DFD9CC;
-  background-image: url("/assets/wov.png"); }
+  background-image: url("./assets/wov.png"); }
 
 header {
   position: fixed;
