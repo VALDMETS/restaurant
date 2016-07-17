@@ -34,11 +34,11 @@ function renderOrder() {
         special: $('#special').val()
       });
 
-      // orderList().save(null, {
-      //   success: function() {
-      //     console.log('order sent');
-      //   }
-      // });
+      orderList.save(null, {
+        success: function() {
+          console.log('order sent');
+        }
+      });
 
       router.navigate('order/complete', {trigger: true});
 

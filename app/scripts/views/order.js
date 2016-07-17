@@ -4,6 +4,7 @@ import Bb from 'backbone';
 import Order from '../models/ordertemplate';
 import menuHold from '../collections/menuhold';
 import MenuItem from '../models/menuitem';
+import deleteFunction from '../models/delete';
 
 function orderFunction () {
 
@@ -32,20 +33,26 @@ function orderFunction () {
     $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
     $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
 
+    // $('.delete').click(deleteFunction);
+
     $('.delete').click(function(){
       buttonID = $(this).parent().data().id;
       orderList.removeCost(buttonID);
       $('.currenttax').text('$' + orderList.get('tax').toFixed(2));
       $('.currenttotal').text('$' + orderList.get('total').toFixed(2));
+      // console.log(buttonID);
       orderList.set({
         items: orderList.get('items').filter(function(item){
           if (item.id!=buttonID) {
+            // console.log('included one');
             return true;
           } else {
+            // console.log('excluded one');
             return false;
           }
         })
       });
+      console.log(orderList.get('items'));
       $(this).parent().addClass('hidden');
     });
   });

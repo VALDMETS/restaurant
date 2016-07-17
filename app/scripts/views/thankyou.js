@@ -16,8 +16,10 @@ function renderThankYou(){
       $('.currenttax').text('$0.00');
       $('.currenttotal').text('$0.00');
       let orderList = orderFunction();
+      console.log(orderList);
       orderList.items = [];
       console.log(orderList.items);
+      router.navigate('menu',{trigger: true});
     });
 
 

@@ -5,7 +5,7 @@ body {
   margin: 0;
   color: $black;
   font-family: 'Dosis', sans-serif;
-  // background-color: $white;
+  background-color: #DFD9CC;
   background-image: url("/assets/wov.png");
 }
 
@@ -13,7 +13,7 @@ header {
   position: fixed;
   z-index: 1;
   background-color: $pink;
-  opacity: .9;
+  opacity: .8;
   color: $light;
   height: 50px;
   width: 100%;

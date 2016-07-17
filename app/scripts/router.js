@@ -10,7 +10,8 @@ const Router = Bb.Router.extend({
   routes: {
     'menu'           : 'menuFunction',
     'order'          : 'orderFunction',
-    'order/complete' : 'orderComplete'
+    'order/complete' : 'orderComplete',
+    '/*'             : 'menuFunction'
   },
   menuFunction: function() {
     renderMenu();
